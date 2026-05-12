@@ -1,0 +1,389 @@
+---
+import '../styles/global.css';
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" data-i18n-meta="desc" content="Rosario Vintoñuke — Profesora de Inglés en Montevideo, Uruguay. Clases personalizadas adaptadas a tus objetivos." />
+    <title data-i18n-title>Rosario Vintoñuke — Profesora de Inglés</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="nav">
+      <div class="nav-inner">
+        <a href="#" class="nav-logo">Rosario Vintoñuke</a>
+        <ul class="nav-links">
+          <li><a href="#about" data-i18n="nav_about">Sobre mí</a></li>
+          <li><a href="#trayectoria" data-i18n="nav_trayectoria">Trayectoria</a></li>
+          <li><a href="#contact" data-i18n="nav_contact">Contacto</a></li>
+        </ul>
+        <button id="lang-toggle" class="lang-toggle" aria-label="Switch language">EN</button>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-content">
+          <h1 data-i18n-html="hero_title"></h1>
+          <p data-i18n="hero_subtitle"></p>
+          <div class="hero-buttons">
+            <a href="#contact" class="btn btn-primary" data-i18n="hero_cta"></a>
+            <a href="#about" class="btn btn-outline" data-i18n="hero_secondary"></a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <img class="hero-img" src="/profileImage.jpeg" alt="Rosario Vintoñuke" />
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="container about-single">
+        <div class="about-text reveal">
+          <p class="section-label" data-i18n="about_label"></p>
+          <h2 class="section-title" data-i18n="about_title"></h2>
+          <p data-i18n="about_p1"></p>
+          <p data-i18n="about_p2"></p>
+          <p data-i18n="about_p3"></p>
+          <div class="about-tags" data-i18n-list="about_tags"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trayectoria -->
+    <section class="section section-alt" id="trayectoria">
+      <div class="container" style="text-align:center;">
+        <p class="section-label reveal" data-i18n="tra_label"></p>
+        <h2 class="section-title reveal" data-i18n="tra_title"></h2>
+      </div>
+      <div class="container">
+        <div class="trayectoria-grid">
+          <div class="reveal-left">
+            <h3 class="column-title" data-i18n="tra_exp_title"></h3>
+            <div class="compact-timeline" data-i18n-list="tra_exp_items"></div>
+          </div>
+          <div class="reveal-right">
+            <h3 class="column-title" data-i18n="tra_form_title"></h3>
+            <div class="compact-timeline" data-i18n-list="tra_form_items"></div>
+
+            <h3 class="column-title" style="margin-top:2rem;" data-i18n="tra_certs_title"></h3>
+            <div class="certs-grid-single" data-i18n-list="tra_certs"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <div class="container" style="text-align:center;">
+        <p class="section-label reveal" data-i18n="contact_label"></p>
+        <h2 class="section-title reveal" data-i18n="contact_title"></h2>
+        <p class="section-subtitle reveal" style="margin:0 auto;" data-i18n="contact_subtitle"></p>
+      </div>
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info reveal-left">
+            <h3 data-i18n="contact_info_title"></h3>
+            <p data-i18n="contact_info_text"></p>
+            <ul class="contact-details">
+              <li><span class="icon">&#x1F4CD;</span> <span data-i18n="contact_location"></span></li>
+              <li><span class="icon">&#x1F4E7;</span> rovinto007@gmail.com</li>
+              <li><span class="icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></span> <a href="https://www.linkedin.com/in/rosario-v-183b92237" target="_blank" rel="noopener">LinkedIn</a></li>
+            </ul>
+          </div>
+          <form class="contact-form reveal-right" id="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+            <input type="text" name="name" data-i18n-placeholder="form_name" required />
+            <input type="email" name="email" data-i18n-placeholder="form_email" required />
+            <textarea name="message" data-i18n-placeholder="form_message" required></textarea>
+            <button type="submit" class="btn btn-primary" style="align-self:flex-start;" data-i18n="form_button"></button>
+            <p class="form-status" style="display:none;font-size:0.85rem;margin-top:0.5rem;"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer reveal">
+      <div class="footer-logo">Rosario Vintoñuke</div>
+      <p data-i18n="footer_tagline"></p>
+      <p style="margin-top:1rem;font-size:0.8rem;opacity:0.5;" data-i18n="footer_copy">&copy; 2026 Rosario Vintoñuke.</p>
+    </footer>
+
+    <script>
+      const translations = {
+        es: {
+          // Meta
+          title: "Rosario Vintoñuke — Profesora de Inglés",
+          desc: "Rosario Vintoñuke — Profesora de Inglés en Montevideo, Uruguay. Clases personalizadas adaptadas a tus objetivos.",
+
+          // Nav
+          nav_about: "Sobre mí",
+          nav_trayectoria: "Trayectoria",
+          nav_contact: "Contacto",
+
+          // Hero
+          hero_title: 'Profesora de<br>Inglés',
+          hero_subtitle: "Soy Rosario Vintoñuke, profesora de inglés con más de diez años de experiencia. Actualmente soy docente remota del programa Ceibal en Inglés. Doy clases personalizadas adaptadas a tus intereses, nivel y objetivos.",
+          hero_cta: "Consultame",
+          hero_secondary: "Conocé más",
+
+          // About
+          about_label: "Sobre mí",
+          about_title: "",
+          about_p1: "Arranqué dando clases particulares en 2016 y desde entonces vengo acompañando a estudiantes de todas las edades con diferentes metas. Algunos necesitan reforzar contenidos escolares o rendir materias pendientes. Otros buscan aprender o mejorar su inglés desde cero, de forma personalizada.",
+          about_p2: "Actualmente doy clases como profesora remota para el programa Ceibal en Inglés del sistema educativo uruguayo, trabajando con institutos como Eureka. También trabajé en colegios de nivel primario y secundario en Buenos Aires.",
+          about_p3: "Me recibí como Profesora de Inglés en el Instituto Superior de Formación Docente N° 24 de Buenos Aires. Creo que cada alumno es distinto y que las clases tienen que diseñarse de acuerdo a sus necesidades.",
+          about_tags: ["Clases personalizadas", "Apoyo escolar", "Inglés conversacional", "Videoconferencia"],
+
+          // Trayectoria
+          tra_label: "Trayectoria",
+          tra_title: "Experiencia y formación",
+          tra_exp_title: "Experiencia",
+          tra_form_title: "Formación",
+          tra_certs_title: "Certificaciones",
+          tra_exp_items: [
+            { meta: "2025 — Presente", title: "Eureka — Ceibal en Inglés", desc: "English Teacher (desde mar. 2025) y Auxiliar administrativo (desde feb. 2026)." },
+            { meta: "2024 — 2025", title: "Secretaria del Depto. de Inglés — Escuela Integral", desc: "Apoyo administrativo y cobertura de clases en institución con Bachillerato Internacional." },
+            { meta: "2023 — 2024", title: "Consultora Evolución — Ceibal en Inglés", desc: "Docente remota y asistente pedagógica para el programa de inglés en primaria." },
+            { meta: "2019 — 2022", title: "Profesora en colegios de Buenos Aires", desc: "Titular de primaria en Don José de San Martín, Santalucina y William Morris. Titular de secundaria en Don José de San Martín." },
+            { meta: "2016 — 2022", title: "Profesora de Inglés en DGCyE", desc: "Suplente y provisional en nivel primario y secundario, Provincia de Buenos Aires." },
+            { meta: "2016 — Presente", title: "Tutora privada de Inglés", desc: "Clases particulares personalizadas para todos los niveles y objetivos." }
+          ],
+          tra_form_items: [
+            { meta: "2013 — 2019", title: "Profesorado de Inglés", desc: "ISFDyT N° 24 de Bernal, Buenos Aires." }
+          ],
+          tra_certs: [
+            { name: "Helping teachers to learn", meta: "British Council · 2026" },
+            { name: "Adaptive Pedagogical Routines (APRs) for Ceibal en Inglés", meta: "Ceibal · 2026" },
+            { name: "Competencias digitales para profesionales", meta: "Google Skillshop · 2026" },
+            { name: "Generative AI for Educators", meta: "Google · 2024" },
+            { name: "Mediación docente para el aprendizaje y la metacognición", meta: "Ceibal · 2024" },
+            { name: "Aprendizaje colaborativo online y su implicancia didáctica", meta: "Ceibal · 2024" },
+            { name: "Hacia una pedagogía de la convivencia", meta: "Ceibal · 2024" },
+            { name: "Protege tu Negocio: Ciberseguridad en el Teletrabajo", meta: "Google Skillshop · 2023" },
+            { name: "Productividad Personal", meta: "Google Skillshop · 2023" },
+            { name: "Operador de PC — Programas administrativos", meta: "Centro Cultural Sarmiento · 2010" }
+          ],
+
+          // Contact
+          contact_label: "Contacto",
+          contact_title: "Conversemos",
+          contact_subtitle: "Contame cuál es tu objetivo con el inglés y coordinamos una primera clase sin compromiso.",
+          contact_info_title: "Datos de contacto",
+          contact_info_text: "Escribime sin problema. Respondo dentro de las 24 horas.",
+          contact_location: "Montevideo, Uruguay",
+          form_name: "Tu nombre",
+          form_email: "Tu email",
+          form_message: "Contame sobre vos y qué te gustaría trabajar...",
+          form_button: "Enviar mensaje",
+
+          // Footer
+          footer_tagline: "Profesora de Inglés — Montevideo, Uruguay",
+          footer_copy: "© 2026 Rosario Vintoñuke. Todos los derechos reservados."
+        },
+        en: {
+          title: "Rosario Vintoñuke — English Teacher",
+          desc: "Rosario Vintoñuke — English Teacher in Montevideo, Uruguay. Personalized classes tailored to your goals.",
+
+          nav_about: "About",
+          nav_trayectoria: "Background",
+          nav_contact: "Contact",
+
+          hero_title: 'English<br>Teacher',
+          hero_subtitle: "I'm Rosario Vintoñuke, an English teacher with over ten years of experience. I currently teach remotely for the Ceibal en Inglés program. I offer personalized classes tailored to your interests, level, and goals.",
+          hero_cta: "Get in touch",
+          hero_secondary: "Learn more",
+
+          about_label: "About me",
+          about_title: "",
+          about_p1: "I started private tutoring in 2016 and have since worked with students of all ages with different goals. Some need to strengthen school content or make up pending subjects. Others want to learn or improve their English from scratch, with a personalized approach.",
+          about_p2: "I currently teach as a remote teacher for Uruguay's Ceibal en Inglés program, working with institutes such as Eureka. I have also taught at primary and secondary schools in Buenos Aires.",
+          about_p3: "I earned my English Teaching degree from ISFDyT N° 24 in Buenos Aires. I believe every student is different and lessons should be designed around their needs.",
+          about_tags: ["Personalized classes", "School support", "Conversational English", "Videoconference"],
+
+          tra_label: "Background",
+          tra_title: "Experience & education",
+          tra_exp_title: "Experience",
+          tra_form_title: "Education",
+          tra_certs_title: "Certifications",
+          tra_exp_items: [
+            { meta: "2025 — Present", title: "Eureka — Ceibal en Inglés", desc: "English Teacher (since Mar 2025) and Administrative Assistant (since Feb 2026)." },
+            { meta: "2024 — 2025", title: "English Dept. Secretary — Escuela Integral", desc: "Administrative support and class coverage at an IB institution." },
+            { meta: "2023 — 2024", title: "Consultora Evolución — Ceibal en Inglés", desc: "Remote teacher and pedagogical assistant for Uruguay's primary English program." },
+            { meta: "2019 — 2022", title: "English Teacher at schools in Buenos Aires", desc: "Head teacher for primary level at Don José de San Martín, Santalucina, and William Morris. Head teacher for secondary level at Don José de San Martín." },
+            { meta: "2016 — 2022", title: "English Teacher at DGCyE", desc: "Substitute and provisional teacher for primary and secondary levels, Buenos Aires Province." },
+            { meta: "2016 — Present", title: "Private English Tutor", desc: "Personalized one-on-one lessons for all levels and goals." }
+          ],
+          tra_form_items: [
+            { meta: "2013 — 2019", title: "English Teaching Degree", desc: "ISFDyT N° 24, Bernal, Buenos Aires." }
+          ],
+          tra_certs: [
+            { name: "Helping teachers to learn", meta: "British Council · 2026" },
+            { name: "Adaptive Pedagogical Routines (APRs) for Ceibal en Inglés", meta: "Ceibal · 2026" },
+            { name: "Digital Skills for Professionals", meta: "Google Skillshop · 2026" },
+            { name: "Generative AI for Educators", meta: "Google · 2024" },
+            { name: "Teaching Mediation for Learning and Metacognition", meta: "Ceibal · 2024" },
+            { name: "Online Collaborative Learning and its Didactic Implications", meta: "Ceibal · 2024" },
+            { name: "Toward a Pedagogy of Coexistence", meta: "Ceibal · 2024" },
+            { name: "Protect Your Business: Cybersecurity in Remote Work", meta: "Google Skillshop · 2023" },
+            { name: "Personal Productivity", meta: "Google Skillshop · 2023" },
+            { name: "PC Operator — Administrative Software", meta: "Centro Cultural Sarmiento · 2010" }
+          ],
+
+          contact_label: "Contact",
+          contact_title: "Let's talk",
+          contact_subtitle: "Tell me about your English goals and we'll schedule a no-commitment first session.",
+          contact_info_title: "Contact details",
+          contact_info_text: "Feel free to reach out. I respond within 24 hours.",
+          contact_location: "Montevideo, Uruguay",
+          form_name: "Your name",
+          form_email: "Your email",
+          form_message: "Tell me about yourself and what you'd like to work on...",
+          form_button: "Send message",
+
+          footer_tagline: "English Teacher — Montevideo, Uruguay",
+          footer_copy: "© 2026 Rosario Vintoñuke. All rights reserved."
+        }
+      };
+
+      let currentLang = localStorage.getItem('lang') || 'es';
+
+      function setLang(lang) {
+        currentLang = lang;
+        localStorage.setItem('lang', lang);
+        document.documentElement.lang = lang;
+        const t = translations[lang];
+        const btn = document.getElementById('lang-toggle');
+        btn.textContent = lang === 'es' ? 'EN' : 'ES';
+
+        // Meta
+        document.title = t.title;
+        document.querySelector('meta[name="description"]').setAttribute('content', t.desc);
+
+        // Text content
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+          const key = el.dataset.i18n;
+          if (t[key] !== undefined) {
+            if (t[key] === '') {
+              el.style.display = 'none';
+            } else {
+              el.style.display = '';
+              el.textContent = t[key];
+            }
+          }
+        });
+
+        // HTML content
+        document.querySelectorAll('[data-i18n-html]').forEach(el => {
+          const key = el.dataset.i18nHtml;
+          if (t[key]) el.innerHTML = t[key];
+        });
+
+        // Placeholders
+        document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+          const key = el.dataset.i18nPlaceholder;
+          if (t[key]) el.setAttribute('placeholder', t[key]);
+        });
+
+        // Lists
+        document.querySelectorAll('[data-i18n-list]').forEach(el => {
+          const key = el.dataset.i18nList;
+          const items = t[key];
+          if (!items) return;
+
+          if (el.classList.contains('about-tags')) {
+            el.innerHTML = items.map(i => `<span class="tag">${i}</span>`).join('');
+          } else if (el.classList.contains('compact-timeline')) {
+            el.innerHTML = items.map(i =>
+              `<div class="ct-item reveal visible"><p class="ct-meta">${i.meta}</p><h4>${i.title}</h4><p>${i.desc}</p></div>`
+            ).join('');
+          } else if (el.classList.contains('certs-grid-single')) {
+            el.innerHTML = items.map(i =>
+              `<div class="cert-card reveal visible"><h4>${i.name}</h4><span class="cert-meta">${i.meta}</span></div>`
+            ).join('');
+          }
+        });
+      }
+
+      document.getElementById('lang-toggle').addEventListener('click', () => {
+        setLang(currentLang === 'es' ? 'en' : 'es');
+      });
+
+      // Init
+      setLang(currentLang);
+
+      // IntersectionObserver
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        },
+        { threshold: 0.15, rootMargin: '0px 0px -40px 0px' }
+      );
+
+      function observeElements() {
+        document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach((el) => {
+          observer.observe(el);
+        });
+      }
+
+      observeElements();
+
+      // Contact form
+      const form = document.getElementById('contact-form');
+      const statusEl = form.querySelector('.form-status');
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const fd = new FormData(form);
+
+        // Try Formspree if configured with a real form ID
+        if (form.action.includes('your-form-id')) {
+          // Fallback to mailto
+          const subject = `Contacto desde landing page — ${fd.get('name')}`;
+          const body = `Nombre: ${fd.get('name')}\nEmail: ${fd.get('email')}\n\n${fd.get('message')}`;
+          window.location.href = `mailto:rovinto007@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+          statusEl.style.display = 'block';
+          statusEl.textContent = 'Abriendo cliente de correo...';
+          statusEl.className = 'form-status success';
+          form.reset();
+          return;
+        }
+
+        // Formspree submission
+        try {
+          const res = await fetch(form.action, {
+            method: 'POST',
+            body: fd,
+            headers: { Accept: 'application/json' }
+          });
+          statusEl.style.display = 'block';
+          if (res.ok) {
+            statusEl.textContent = '¡Mensaje enviado! Te responderé pronto.';
+            statusEl.className = 'form-status success';
+            form.reset();
+          } else {
+            statusEl.textContent = 'Hubo un error. Intentá de nuevo o escribime a rovinto007@gmail.com';
+            statusEl.className = 'form-status error';
+          }
+        } catch {
+          statusEl.style.display = 'block';
+          statusEl.textContent = 'Error de conexión. Escribime a rovinto007@gmail.com';
+          statusEl.className = 'form-status error';
+        }
+      });
+    </script>
+  </body>
+</html>
